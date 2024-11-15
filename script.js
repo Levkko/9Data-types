@@ -1,11 +1,9 @@
-// Довільне ціле число від min до max 
+// Виділіть гроші
 
-let min = +prompt("Введіть мінімальне число", 1);
-let max = +prompt("Введіть максимальне число", 5);
+let str = `$120`;
 
-function random(min, max) {
-    return min + Math.random() * (max - min);
-  }
+function extractCurrencyValue(str) {
+    return +str.slice(1);
+};
 
-alert( random(min, max).toFixed(0) ); 
-
+alert(extractCurrencyValue(str));
